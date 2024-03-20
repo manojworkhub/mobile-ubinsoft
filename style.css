@@ -1,0 +1,1989 @@
+@import url("https://fonts.googleapis.com/css2?family=Afacad&family=Bebas+Neue&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+body {
+  border: 0;
+  margin: 0;
+  /* user-select: none; */
+  font-family: sansbold, sans-serif;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+}
+
+* {
+  border: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* nav alinement */
+/* nav bar start */
+header {
+  width: 100%;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+
+nav {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgb(0, 0, 0);
+  padding: 10px;
+}
+
+.hamburger {
+  background: none;
+  position: absolute;
+  top: 10px;
+  left: 15px;
+  line-height: 45px;
+  padding: 5px 0 0 20px;
+  color: #ffffff;
+  border: 0;
+  font-size: 2.5em;
+  font-weight: bold;
+  cursor: pointer;
+  outline: none;
+  z-index: 10000000000000;
+}
+
+.cross {
+  background: none;
+  position: absolute;
+  top: 10px;
+  left: 13px;
+  padding: 7px 15px 0px 15px;
+  color: #ffffff;
+  border: 0;
+  font-size: 5rem;
+  line-height: 65px;
+  font-weight: bold;
+  cursor: pointer;
+  outline: none;
+  z-index: 10000000000000;
+}
+
+#logo {
+  width: 150px;
+  height: 50px;
+  background-image: url(./mainIMG/logo\ u.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.login,
+a {
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  margin-top: 10px;
+  cursor: pointer;
+  font-size: 2rem;
+  color: white;
+}
+
+.buttonone div {
+  display: flex;
+  flex-direction: column;
+  border: 0;
+}
+
+.buttonHEAD {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  background-color: rgb(0, 0, 0);
+  z-index: 10000000000000;
+  transition: 1s;
+}
+
+.buttonone,
+.buttontwo,
+.buttonthree,
+.buttonfour {
+  background-color: transparent;
+  border-bottom: 0.8px solid rgba(255, 255, 255, 0.432);
+
+  width: 100%;
+}
+
+.title {
+  font-family: "Bebas Neue", sans-serif;
+  letter-spacing: 5px;
+  color: white;
+}
+
+.listone {
+  padding: 0 50px;
+}
+
+.listone a {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  align-items: center;
+  padding: 0;
+  width: 100%;
+  height: 30px;
+  margin: 0;
+  border: 0;
+}
+
+.buttonHEAD a {
+  text-decoration: none;
+  font-size: 0.9rem;
+  padding: 1px 0;
+  color: white;
+  margin: 5px 0;
+}
+
+.title {
+  text-align: left;
+  padding: 0 10px;
+  font-size: 2rem;
+  font-weight: bolder;
+}
+
+.download {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 100%;
+}
+
+.download a {
+  text-align: center;
+  width: 100%;
+}
+
+.download a i {
+  padding: 5px;
+}
+
+#search {
+  width: 100%;
+  height: 100px;
+}
+
+.seaframe {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.seaframe a {
+  padding: 10px 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+}
+
+.seaframe input {
+  width: 90%;
+  height: 30px;
+  padding: 20px 20px;
+  border-radius: 25px;
+  background-color: gray;
+  cursor: pointer;
+  color: white;
+}
+
+::placeholder {
+  color: white;
+  font-size: 1rem;
+}
+
+.base1 {
+  background-image: url();
+}
+
+/* nav bar end  */
+
+/* ****animation for button com******** */
+
+.animated-button {
+  width: 250px;
+  display: inline-block;
+  padding: 12px 50px;
+  border: none;
+  font-size: 16px;
+  background-color: rgb(0, 183, 255);
+  border-radius: 100px;
+  font-weight: 600;
+  color: white;
+  box-shadow: 0 0 0 2px #ffffff20;
+  cursor: pointer;
+  overflow: hidden;
+  transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.animated-button span:last-child {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 20px;
+
+  padding: 10px;
+  background-color: rgba(255, 255, 255, 0.452);
+  border-radius: 25px;
+  opacity: 0;
+  transition: all 0.4s cubic-bezier(0.23, 0.2, 0.32, 1);
+}
+
+.animated-button span:first-child {
+  position: relative;
+  z-index: 1;
+}
+
+.animated-button:hover span:last-child {
+  width: 300px;
+  height: 50px;
+  opacity: 1;
+}
+
+/* animation button end  */
+/* Next & previous buttons */
+.slider-btns {
+  position: absolute;
+  top: 850px;
+  left: 0;
+  transform: translateY(-50%);
+  z-index: 1;
+}
+
+.slider-btns2 {
+  position: absolute;
+  right: 0;
+  top: 850px;
+  transform: translateY(-50%);
+
+  z-index: 1;
+}
+
+.slider-btns #btn-prev {
+  font-size: 3rem;
+  font-weight: 500;
+  background-color: rgba(255, 255, 255, 0.082);
+  border: none;
+  color: rgb(255, 255, 255);
+  width: 50px;
+  height: 50px;
+  line-height: 30px;
+  cursor: pointer;
+}
+
+.slider-btns2 #btn-next {
+  font-size: 3rem;
+  font-weight: 500;
+  background-color: rgba(255, 255, 255, 0.082);
+  border: none;
+  color: rgb(255, 255, 255);
+  width: 50px;
+  height: 50px;
+  line-height: 30px;
+  cursor: pointer;
+}
+
+#btn-prev {
+  border-radius: 0 25px 25px 0;
+}
+
+#btn-next {
+  border-radius: 25px 0 0 25px;
+}
+
+/* section one start  */
+#s1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* hidding and active the img continer   start*/
+.continer {
+  width: 100%;
+  height: 800px;
+  position: relative;
+}
+
+.spliceitem,
+.hidden {
+  display: none;
+}
+
+.active {
+  display: block;
+  animation: fade 0.5s;
+}
+
+@keyframes fade {
+  0% {
+    opacity: 0.8;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+/* hidding and active the img continer   end*/
+
+/* slide 1  */
+.base1 {
+  color: white;
+  width: 100%;
+  height: 100%;
+  background-image: url(./mainIMG/gamebaner/10040.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-clip: border-box;
+}
+
+.base1 button {
+  width: 280px;
+  font-size: 1.25rem;
+  background-color: rgb(0, 183, 255);
+  border-radius: 25px;
+  padding: 10px 50px;
+  font-weight: bold;
+  color: white;
+  position: relative;
+  left: 610px;
+  top: 100px;
+  transform: translateX(250%);
+  
+}
+
+.base1 button:hover {
+  background-color: rgba(93, 198, 240, 0.5);
+}
+
+#logoST {
+  width: 260px;
+}
+
+.base1 h1 {
+  font-size: 3.2rem;
+  margin: 200px 0 0 300px;
+
+  text-shadow: 0px 0px 11px rgba(0, 0, 0, 1);
+}
+
+.base1 h3 {
+  width: 500px;
+  font-size: 1.5rem;
+  font-weight: lighter;
+  margin: 0 0 0 300px;
+  /* border: 2px solid red; */
+  text-shadow: 0px 0px 11px rgba(0, 0, 0, 1);
+}
+
+.base1 #imgLOGO {
+  position: relative;
+  left: 370px;
+  top: 300px;
+  width: 200px;
+  transform: translateX(190%);
+  /* border: 2px solid red; */
+}
+
+/* slide 2 */
+
+.base2 {
+  color: white;
+  width: 100%;
+  height: 800px;
+  background-image: url(./mainIMG/gamebaner/aaa.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.base2 button {
+  width: 300px;
+  font-size: 1.25rem;
+  background-color: rgb(0, 183, 255);
+  border-radius: 25px;
+  padding: 10px 50px;
+  font-weight: bold;
+  color: white;
+  margin: 0 10px;
+  position: relative;
+  left: 290px;
+  top: 50px;
+  transform: translateX(190%);
+}
+
+.base2 button:hover {
+  background-color: rgba(93, 198, 240, 0.5);
+}
+
+#logoST {
+  width: 260px;
+}
+
+.base2 h1 {
+  font-size: 3.2rem;
+  margin: 200px 0 0 300px;
+  text-shadow: 0px 0px 11px rgba(0, 0, 0, 1);
+}
+
+.base2 h3 {
+  width: 900px;
+  font-size: 1.5rem;
+  font-weight: lighter;
+  margin: 10px 0 0 300px;
+  text-align: center;
+  text-shadow: 0px 0px 11px rgba(0, 0, 0, 1);
+}
+
+.base2 #imgLOGO {
+  position: relative;
+  left: -90px;
+  top: 200px;
+  width: 200px;
+  transform: translateX(-60%);
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+    rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+
+/* slide2   */
+
+/* slide3 start  */
+.base3 {
+  color: white;
+  width: 100%;
+  height: 800px;
+  background-image: url(./mainIMG/gamebaner/skill.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.base3 button {
+  width: 300px;
+  font-size: 1.25rem;
+  background-color: #e69d10;
+  border-radius: 25px;
+  padding: 10px 50px;
+  font-weight: bold;
+  color: white;
+  position: relative;
+  left: 290px;
+  top: 50px;
+  margin: 0 20px;
+  transform: translateX(150%);
+}
+
+.base3 button:hover {
+  background-color: #e69d10;
+}
+
+#logoST {
+  width: 260px;
+}
+
+.base3 h1 {
+  width: 900px;
+  font-size: 3.2rem;
+  margin: 200px 0 0 -100px;
+  text-shadow: 0px 0px 11px rgba(0, 0, 0, 1);
+  text-align: center;
+  transform: translateX(50%);
+}
+
+.base3 h3 {
+  width: 1000px;
+  font-size: 1.5rem;
+  font-weight: lighter;
+  margin: 10px 0 0 300px;
+  /* border: 2px solid red; */
+  text-align: center;
+  text-shadow: 0px 0px 11px rgba(0, 0, 0, 1);
+}
+
+.base3 #imgLOGO {
+  position: relative;
+  left: -220px;
+  top: 200px;
+  width: 300px;
+  transform: translateX(50%);
+}
+
+/* slide 4 */
+
+.base4 {
+  color: white;
+  width: 100%;
+  height: 800px;
+  background-image: url(./mainIMG/gamebaner/10060.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.base4 button {
+  width: 250px;
+  font-size: 1.25rem;
+  background-color: #ff0d78;
+  border-radius: 25px;
+  padding: 10px 50px;
+  font-weight: bold;
+  color: white;
+  margin: 0 10px;
+  position: relative;
+  left: 500px;
+  top: 400px;
+  transform: translateX(280%);
+}
+
+.base4 button:hover {
+  background-color: #ff0d78;
+}
+
+.base4 h1 {
+  width: 500px;
+  font-size: 3.2rem;
+
+  text-shadow: 0px 0px 11px rgba(0, 0, 0, 1);
+  position: relative;
+  top: 320px;
+  left: 300px;
+  transform: translateX(120%);
+}
+
+.base4 h3 {
+  width: 900px;
+  font-size: 1.5rem;
+  font-weight: lighter;
+  position: relative;
+  top: 350px;
+  left: 650px;
+  text-align: center;
+  text-shadow: 0px 0px 11px rgba(0, 0, 0, 1);
+}
+
+.base4 #imgLOGO {
+  position: relative;
+  left: 250px;
+  top: 550px;
+  width: 250px;
+  transform: translateX(50%);
+}
+
+/* slide 5 start  */
+.base5 {
+  color: white;
+  width: 100%;
+  height: 800px;
+  background-image: url(./mainIMG/gamebaner/10011.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.base5 button {
+  width: 300px;
+  font-size: 1.25rem;
+  background-color: #d39f88;
+  border-radius: 25px;
+  padding: 10px 50px;
+  font-weight: bold;
+  color: white;
+  position: relative;
+  left: 290px;
+  top: 100px;
+  margin: 0 20px;
+  transform: translateX(150%);
+}
+
+.base5 button:hover {
+  background-color: #d39f88;
+}
+
+#logoST {
+  width: 260px;
+}
+
+.base5 h1 {
+  width: 900px;
+  font-size: 3.2rem;
+  margin: 200px 0 0 350px;
+  text-shadow: 0px 0px 11px rgba(0, 0, 0, 1);
+  text-align: center;
+}
+
+.base5 h3 {
+  width: 1000px;
+  font-size: 1.5rem;
+  font-weight: lighter;
+  margin: 10px 0 0 300px;
+  text-align: center;
+  text-shadow: 0px 0px 11px rgba(0, 0, 0, 1);
+}
+
+.base5 #imgLOGO {
+  position: relative;
+  left: -160px;
+  top: 250px;
+  width: 250px;
+  transform: translateX(50%);
+}
+
+/* section 1 end  */
+
+/* section 2 start  */
+
+/* **************new splid js *********************** */
+
+/* section one img slide css  */
+.splide__slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.splide__slide {
+  opacity: 0.96;
+  background-color: rgb(31, 251, 255);
+  width: 100%;
+  height: 400px;
+}
+
+.splide__slide.is-active {
+  opacity: 1;
+}
+
+/* button style  */
+.btnspace {
+  padding: 50px 0;
+  display: flex;
+  justify-content: center;
+}
+
+#ggbut {
+  width: 250px;
+  display: inline-block;
+  padding: 12px 50px;
+  border: none;
+  font-size: 16px;
+  background-color: #d80489;
+  border-radius: 100px;
+  font-weight: 600;
+  color: white;
+  box-shadow: 0 0 0 2px #ffffff20;
+  cursor: pointer;
+  overflow: hidden;
+  transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+#ggbut:hover span {
+  color: #ffffff;
+}
+
+#ggbut span:last-child {
+  position: absolute;
+  top: 89%;
+  left: 50%;
+
+  transform: translate(-50%, -50%);
+  width: 20px;
+  height: 50px;
+
+  padding: 10px;
+  background-color: rgba(255, 255, 255, 0.452);
+  border-radius: 25px;
+  opacity: 0;
+  transition: all 0.4s cubic-bezier(0.23, 0.2, 0.32, 1);
+}
+
+#ggbut span:first-child {
+  position: relative;
+  z-index: 1;
+}
+
+#ggbut:hover span:last-child {
+  width: 300px;
+  height: 50px;
+  opacity: 1;
+}
+
+/* *********************************** */
+#thumbnail-carousel h1 {
+  text-align: center;
+  font-size: 2.25rem;
+  font-weight: bold;
+  padding: 50px;
+}
+
+.splide_track {
+  width: 100%;
+  height: 500px;
+}
+
+.splide__slide {
+  color: rgb(0, 0, 0);
+  background-color: white;
+  margin: 0 10px;
+}
+
+.splide__slide .gamename {
+  padding: 20px 5px;
+}
+
+.splide__slide a {
+  font-size: 16px;
+  font-weight: bolder;
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+  text-transform: capitalize;
+  text-align: start;
+}
+
+.splide__slide:hover a {
+  text-decoration: underline;
+}
+
+.spanicon {
+  padding: 5px 0 0 0;
+  /* border: 2px solid red; */
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  bottom: 0;
+}
+
+.spanicon img {
+  width: 50%;
+  object-fit: contain;
+}
+
+.splide__arrow--next {
+  font-size: 30px;
+
+  color: rgb(0, 0, 0);
+}
+
+.splide__arrow--prev {
+  font-size: 30px;
+
+  color: rgb(0, 0, 0);
+}
+
+/* **************new splid js *********************** */
+/* article 3 start  */
+#a1 {
+  width: 100%;
+
+  font-family: "Poppins", sans-serif;
+  background-color: gainsboro;
+  font-size: 12px;
+  text-align: justify;
+}
+
+#a1 h1 {
+  text-align: center;
+  padding: 40px;
+  font-size: 2rem;
+}
+
+#a1 .a {
+  /* margin: 0 0 0 450px; */
+  /* position: relative; */
+
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#a1 a {
+  width: 200px;
+  color: #d80489;
+  margin: 0;
+  border: 0;
+  font-size: 16px;
+  text-align: center;
+  padding: 0 20px;
+  text-decoration: none;
+  /* border: 2px solid red; */
+}
+
+#a1 a:hover {
+  text-decoration: underline;
+}
+
+#a1 a:active,
+#a1 a:valid a {
+  font-weight: bolder;
+}
+
+.pageone {
+  padding: 50px 0 0 10px;
+
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.s3frame .s3baseone {
+  margin: 20px;
+  font-family: "Poppins", sans-serif;
+}
+
+.pageone img {
+  width: 100%;
+}
+
+.s3frame .s3basetwo {
+  margin: 20px;
+  /* height: 200px; */
+}
+
+.s3baseone .s3base2slidetwo {
+  display: flex;
+  padding: 0px 0;
+  position: relative;
+  top: 20px;
+  /* border: 2px solid red; */
+}
+
+.s3baseone .s3base2slidetwo img {
+  width: 50%;
+  padding: 0 30px 0 0;
+}
+
+#date1 {
+  font-weight: lighter;
+  font-size: small;
+  text-decoration: none;
+}
+
+#date2 {
+  font-weight: lighter;
+  font-size: small;
+  text-decoration: none;
+}
+
+#date3 {
+  font-weight: lighter;
+  font-size: small;
+  text-decoration: none;
+}
+
+#date4 {
+  font-weight: lighter;
+  font-size: small;
+  text-decoration: none;
+}
+
+#date5 {
+  font-weight: lighter;
+  font-size: small;
+  text-decoration: none;
+}
+
+.s3frame h2 {
+  padding-right: 20px;
+}
+
+.s3frame h2:hover {
+  text-decoration: underline;
+}
+
+.s3frame img:hover h2 {
+  text-decoration: underline;
+}
+
+.s3frame .s3basetwo {
+  height: 600px;
+  /* border: 2px solid rgb(0, 255, 42); */
+}
+
+.s3frame .s3basetwo .s3b2card {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 0 0 115px 0;
+  /* border: 2px solid red; */
+}
+
+.s3frame .s3basetwo .s3b2card .dateandh2 {
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+  margin: 0;
+  border: 0;
+}
+
+.s3frame .s3basetwo .s3b2card img {
+  width: 42%;
+  padding: 0 40px 0 0;
+}
+
+#articalbut {
+  border: 2px solid #d80489;
+  position: relative;
+
+  left: 510px;
+
+  margin: 100px 0;
+
+  padding: 10px 50px;
+  border-radius: 25px;
+  font-weight: bold;
+  background-color: #d80489;
+  color: white;
+  transition: 0.2s all ease-in-out;
+  transform: translateX(250%);
+}
+
+#articalbut:hover span {
+  background-color: white;
+  color: #d80489;
+}
+
+/* page one */
+.assassin {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(600px, 1fr));
+  padding: 60px 0 0 0;
+}
+
+.assassin .baseFROass {
+  display: flex;
+  /* border: 2px solid red; */
+  padding: 10px;
+}
+
+.assassin .baseFROass img {
+  width: 50%;
+  padding: 0 20px;
+}
+
+.raibow {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(600px, 1fr));
+  padding: 60px 0 0 0;
+}
+
+.raibow .baseFROrai {
+  display: flex;
+  /* border: 2px solid red; */
+  padding: 10px;
+}
+
+.raibow .baseFROrai img {
+  width: 50%;
+  padding: 0 20px;
+}
+
+.avatar {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(600px, 1fr));
+  padding: 60px 0 0 0;
+}
+
+.avatar .baseFROava {
+  display: flex;
+  /* border: 2px solid red; */
+  padding: 10px;
+}
+
+.avatar .baseFROava img {
+  width: 50%;
+  padding: 0 20px;
+}
+
+.thedivision {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(600px, 1fr));
+  padding: 60px 0 0 0;
+}
+
+.thedivision .baseFROthe {
+  display: flex;
+  /* border: 2px solid red; */
+  padding: 10px;
+}
+
+.thedivision .baseFROthe img {
+  width: 50%;
+  padding: 0 20px;
+}
+
+
+/* total artical section end  */
+
+/* cardsection 1 start  */
+
+#s3 {
+  padding: 0 0 50px 0;
+}
+
+#s3 h1 {
+  width: 100%;
+  text-align: center;
+
+  padding: 50px 0;
+
+  font-size: 2rem;
+}
+
+#s3 .frame {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  position: relative;
+  right: 32px;
+}
+
+#s3 .frame h1 {
+  font-family: "Poppins", sans-serif;
+  width: 400px;
+  height: 150px;
+  text-shadow: 0px 0px 11px rgba(0, 0, 0, 1);
+  color: white;
+  text-align: center;
+  padding: 20px;
+  font-size: 1.25rem;
+  text-transform: uppercase;
+}
+
+#s3 .frame h1:hover {
+  text-decoration: underline;
+}
+
+#s3 .frame div:hover h1 {
+  text-decoration: underline;
+}
+
+#s3 .cardone {
+  background-image: url(./mainIMG/card/10001.jpg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 400px;
+  height: 500px;
+  margin: 0 0 20px 0;
+  transform: translateX(10%);
+}
+
+#s3 .cardtwo {
+  background-image: url(./mainIMG/card/10002.jpg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 400px;
+  height: 500px;
+  margin: 0 0 20px 0;
+  transform: translateX(10%);
+}
+
+#s3 .cardthree {
+  background-image: url(./mainIMG/card/10003.jpg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 400px;
+  height: 500px;
+  margin: 0 0 20px 0;
+  transform: translateX(10%);
+  /* border: 4px solid red; */
+}
+
+/* cardsection 1 end  */
+
+/* cardsection 2 start  */
+#s4 {
+  padding: 0 0 50px 0;
+  background-color: #f0f3f4;
+}
+
+#s4 h1 {
+  width: 100%;
+  text-align: center;
+  padding: 20px 0 40px 0;
+  font-size: 2rem;
+}
+
+#s4 .frame2 {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  /* padding: 0 20px 0 0; */
+}
+
+#s4 .frame2 h1:hover {
+  text-decoration: underline;
+}
+
+#s4 .frame2 div:hover h1 {
+  text-decoration: underline;
+}
+
+#s4 .cone {
+  background-image: url(./mainIMG/twocard/10022.jpg);
+  background-size: contain;
+  background-repeat: repeat;
+  background-position: center;
+  width: 400px;
+  height: 400px;
+  border-radius: 25px;
+  /* margin: 50px; */
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+    rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+
+#s4 .ctwo {
+  background-image: url(./mainIMG/twocard/10023.jpg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  width: 400px;
+  height: 400px;
+  border-radius: 25px;
+  /* margin: 50px; */
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+    rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+
+#s4 .cthree {
+  width: 400px;
+  height: 400px;
+  background-image: url(./mainIMG/twocard/10024.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  border-radius: 25px;
+  /* margin: 50px; */
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+    rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+
+#s4 .frame2 h1 {
+  font-family: "Poppins", sans-serif;
+  width: 100%;
+  height: 120px;
+
+  text-shadow: 0px 0px 11px rgba(0, 0, 0, 1);
+  color: white;
+  text-align: center;
+  padding: 20px;
+  font-size: 1.25rem;
+  text-transform: uppercase;
+  border-radius: 0 0 25px 25px;
+  position: relative;
+  top: 280px;
+
+  background-color: rgba(2, 2, 2, 0.322);
+}
+
+/* twocardsection2 end  */
+
+/* finalcard start  */
+.base {
+  width: 100%;
+  display: flex;
+  background-color: #091225;
+  color: white;
+}
+
+.base div {
+  padding: 50px 0;
+  margin: 10px 0;
+}
+
+.base div h1 {
+  font-size: 3rem;
+}
+
+.base h3 {
+  margin: 20px 0 0 0;
+  width: 90%;
+  font-size: 1.5rem;
+  font-weight: lighter;
+}
+
+.base img {
+  width: 50%;
+}
+
+.base button {
+  margin: 50px 0 0 0;
+  border: 2px solid rgb(0, 110, 255);
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: white;
+  background-color: rgb(0, 110, 255);
+  padding: 10px 30px;
+  border-radius: 50px;
+  transform: translateX(start);
+}
+
+.base button:hover {
+  color: rgb(0, 110, 255);
+  background-color: rgb(255, 255, 255);
+}
+
+/* footer start  */
+.socialmedia {
+  background-color: rgb(0, 0, 0);
+  color: white;
+}
+
+.socialbase .soacilap {
+  width: 300px;
+  text-align: left;
+
+  position: absolute;
+  left: 50px;
+}
+
+.animate__flipInX {
+  animation-duration: 10s;
+  animation-timing-function: linear;
+  animation-delay: 1s;
+  animation-iteration-count: p3;
+}
+
+.socialmedia .socialbase {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.socialmedia img {
+  width: 50px;
+  position: relative;
+  left: 200px;
+  padding: 10px;
+}
+
+.ubin {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  background-color: rgb(29, 30, 34);
+}
+
+.ubin .selection {
+  width: 250px;
+  height: 50px;
+  background-color: rgb(29, 30, 34);
+  font-size: 30px;
+  position: relative;
+  right: 100px;
+}
+
+.ubin .ulogo img {
+  width: 15%;
+}
+
+.ubin select {
+  background-color: rgb(29, 30, 34);
+  color: white;
+  font-size: 30px;
+  outline: none;
+}
+
+.info {
+  background-color: rgb(29, 30, 34);
+  display: flex;
+  justify-content: space-around;
+  align-items: start;
+  padding: 10px 100px;
+}
+
+.info h4 {
+  line-height: 40px;
+}
+
+h6 {
+  font-size: 15px;
+  line-height: 40px;
+  color: grey;
+  font-weight: lighter;
+}
+
+.copyrights p {
+  text-align: end;
+  width: 200px;
+  font-size: 10px;
+}
+
+@media all and (max-width:421px){
+
+}
+@media all and (max-width: 700px) {
+  /* slide 1  */
+  .base1 {
+    color: white;
+    width: 100%;
+    height: 100%;
+    background-image: url(./mainIMG/gamebaner/10039.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-clip: border-box;
+  }
+
+  .base1 button {
+    width: 280px;
+    font-size: 1.25rem;
+    background-color: rgb(0, 183, 255);
+    border-radius: 25px;
+    padding: 10px 50px;
+    font-weight: bold;
+    color: white;
+    position: absolute;
+    left: 30px;
+    top: 600px;
+    transform: translateX(50%);
+  }
+
+  .base1 button:hover {
+    background-color: rgba(93, 198, 240, 0.5);
+  }
+
+  #logoST {
+    width: 260px;
+  }
+
+  .base1 h1 {
+    font-size: 2.2rem;
+
+    position: relative;
+
+    right: 100px;
+    text-shadow: 0px 0px 11px rgba(0, 0, 0, 1);
+  }
+
+  .base1 h3 {
+    width: 50%;
+    font-size: 1.2rem;
+    font-weight: lighter;
+
+    position: relative;
+
+    right: 400px;
+
+    text-shadow: 0px 0px 11px rgba(0, 0, 0, 1);
+  }
+
+  .base1 #imgLOGO {
+    position: relative;
+    left: 120px;
+    top: 200px;
+    width: 200px;
+    transform: translateX(50%);
+  }
+
+  /* slide 2 */
+
+  .base2 {
+    color: white;
+    width: 100%;
+    height: 800px;
+    background-image: url(./mainIMG/gamebaner/10062.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  .base2 button {
+    width: 300px;
+    font-size: 1.25rem;
+    background-color: rgb(0, 183, 255);
+    border-radius: 25px;
+
+    font-weight: bold;
+    color: white;
+
+    position: relative;
+    left: 0px;
+    top: 0px;
+    transform: translateX(50%);
+  }
+
+  .base2 button:hover {
+    background-color: rgba(93, 198, 240, 0.5);
+  }
+
+  #logoST {
+    width: 260px;
+  }
+
+  .base2 h1 {
+    font-size: 2.2rem;
+
+    position: relative;
+    bottom: 50px;
+    right: 300px;
+    transform: translateX(50%);
+    text-shadow: 0px 0px 11px rgba(0, 0, 0, 1);
+  }
+
+  .base2 h3 {
+    width: 60%;
+    font-size: 1.2rem;
+    font-weight: lighter;
+    text-align: left;
+    position: relative;
+
+    right: 200px;
+    bottom: 50px;
+    text-shadow: 0px 0px 11px rgba(0, 0, 0, 1);
+  }
+
+  .base2 #imgLOGO {
+    position: relative;
+    left: -20px;
+    top: 100px;
+    width: 200px;
+    transform: translateX(-50%);
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+      rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+      rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+  }
+
+  /* slide2   */
+
+  /* slide3 start  */
+  .base3 {
+    color: white;
+    width: 100%;
+    height: 800px;
+    background-image: url(./mainIMG/gamebaner/skill.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  .base3 button {
+    width: 300px;
+    font-size: 1.25rem;
+    background-color: #e69d10;
+    border-radius: 25px;
+    padding: 10px 50px;
+    font-weight: bold;
+    color: white;
+    margin: 10px 0;
+    position: relative;
+    left: 0px;
+    top: 0px;
+    transform: translateX(50%);
+  }
+
+  .base3 button:hover {
+    background-color: #e69d10;
+  }
+
+  #logoST {
+    width: 260px;
+  }
+
+  .base3 h1 {
+    font-size: 2.2rem;
+    width: 70%;
+    position: relative;
+    bottom: 50px;
+    right: 120px;
+    text-shadow: 0px 0px 11px rgba(0, 0, 0, 1);
+  }
+
+  .base3 h3 {
+    width: 70%;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: lighter;
+
+    position: relative;
+    bottom: 50px;
+    right: 300px;
+    text-shadow: 0px 0px 11px rgba(0, 0, 0, 1);
+  }
+
+  .base3 #imgLOGO {
+    position: relative;
+    left: -200px;
+    top: 100px;
+    width: 200px;
+    transform: translateX(50%);
+  }
+
+  /* slide 4 */
+
+  .base4 {
+    color: white;
+    width: 100%;
+    height: 800px;
+    background-image: url(./mainIMG/gamebaner/10059.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  .base4 button {
+    width: 250px;
+    font-size: 1.25rem;
+    background-color: #ff0d78;
+    border-radius: 25px;
+    padding: 10px 50px;
+    font-weight: bold;
+    color: white;
+    margin: 0 10px;
+    position: relative;
+    left: 50px;
+    top: 400px;
+    transform: translateX(50%);
+  }
+
+  .base4 button:hover {
+    background-color: #ff0d78;
+  }
+
+  .base4 h1 {
+    width: 400px;
+    font-size: 2.2rem;
+
+    text-shadow: 0px 0px 11px rgba(0, 0, 0, 1);
+    position: relative;
+    top: 320px;
+    left: -90px;
+  }
+
+  .base4 h3 {
+    width: 400px;
+    font-size: 1.5rem;
+    font-weight: lighter;
+    position: relative;
+    top: 350px;
+    left: 50px;
+    text-align: center;
+    text-shadow: 0px 0px 11px rgba(0, 0, 0, 1);
+  }
+
+  .base4 #imgLOGO {
+    position: relative;
+    left: -160px;
+    top: 550px;
+    width: 200px;
+    transform: translateX(50%);
+    /* border: 2px solid red; */
+  }
+
+  /* slide 5 start  */
+  .base5 {
+    color: white;
+    width: 100%;
+    height: 800px;
+    background-image: url(./mainIMG/gamebaner/10014.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  .base5 button {
+    width: 300px;
+    font-size: 1.25rem;
+    background-color: #d39f88;
+    border-radius: 25px;
+    padding: 10px 50px;
+    font-weight: bold;
+    color: white;
+    position: relative;
+    left: 00px;
+    top: 0px;
+    margin: 20px;
+    transform: translateX(50%);
+  }
+
+  .base5 button:hover {
+    background-color: #d39f88;
+  }
+
+  #logoST {
+    width: 260px;
+  }
+
+  .base5 h1 {
+    width: 200px;
+    font-size: 2.2rem;
+    position: relative;
+    right: 180px;
+    text-shadow: 0px 0px 11px rgba(0, 0, 0, 1);
+    text-align: center;
+  }
+
+  .base5 h3 {
+    width: 400px;
+    font-size: 1.5rem;
+    font-weight: lighter;
+    position: relative;
+
+    left: -220px;
+    text-align: center;
+    text-shadow: 0px 0px 11px rgba(0, 0, 0, 1);
+  }
+
+  .base5 #imgLOGO {
+    position: relative;
+    left: -230px;
+    top: 100px;
+    width: 200px;
+    transform: translateX(50%);
+  }
+
+  /* section 1 end  */
+
+  /* #s3 .h1 {
+    width: 400px;
+    text-align: center;
+    position: relative;
+    left: 80px;
+  } */
+  #s3 .frame h1 {
+    text-align: center;
+  }
+
+  #s3 .frame {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #s4 .frame2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  #s4 .frame2 div {
+    margin: 20px 0;
+  }
+
+  #s4 .cone {
+    background-image: url(./mainIMG/twocard/10022.jpg);
+    background-size: cover;
+    background-repeat: repeat;
+    background-position: center;
+    width: 400px;
+    height: 400px;
+    border-radius: 25px;
+    /* margin: 50px; */
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+      rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+      rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+  }
+
+  #s4 .ctwo {
+    background-image: url(./mainIMG/twocard/10023.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 400px;
+    height: 400px;
+    border-radius: 25px;
+    /* margin: 50px; */
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+      rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+      rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+  }
+
+  #s4 .cthree {
+    width: 400px;
+    height: 400px;
+    background-image: url(./mainIMG/twocard/10024.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 25px;
+    /* margin: 50px; */
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+      rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+      rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+  }
+  #s4 .frame2 h1 {
+    font-family: "Poppins", sans-serif;
+    width: 100%;
+    height: 120px;
+
+    text-shadow: 0px 0px 11px rgba(0, 0, 0, 1);
+    color: white;
+    text-align: center;
+    padding: 20px;
+    font-size: 1.25rem;
+    text-transform: uppercase;
+    border-radius: 0 0 25px 25px;
+    position: relative;
+    top: 280px;
+
+    background-color: rgba(2, 2, 2, 0.322);
+  }
+
+  #a1 .a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  #a1 .a a {
+    width: 300px;
+  }
+  #articalbut {
+    border: 2px solid #d80489;
+    position: relative;
+    top: 50px;
+    left: 30px;
+    transform: translateX(50%);
+
+    border-radius: 25px;
+    font-weight: bold;
+    background-color: #d80489;
+    color: white;
+    transition: 0.2s all ease-in-out;
+  }
+  .s3frame h2 {
+    padding-right: 16px;
+  }
+  .assassin .baseFROass {
+    width: 530px;
+    /* border: 2px solid red; */
+  }
+  .baseFROrai {
+    width: 530px;
+    /* border: 2px solid red; */
+  }
+  .baseFROava {
+    width: 530px;
+    /* border: 2px solid red; */
+  }
+  .baseFROthe {
+    width: 530px;
+    /* border: 2px solid red; */
+  }
+  /* finalcard start  */
+  .base {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: #091225;
+    color: white;
+  }
+
+  .base div h1 {
+    font-size: 3rem;
+    text-align: center;
+  }
+
+  .base h3 {
+    margin: 20px 0 0 20px;
+    width: 90%;
+    font-size: 1.5rem;
+    font-weight: lighter;
+    text-align: center;
+  }
+
+  .base img {
+    width: 100%;
+  }
+
+  .base button {
+    border: 2px solid rgb(0, 110, 255);
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: white;
+    background-color: rgb(0, 110, 255);
+    padding: 10px 30px;
+    border-radius: 50px;
+    transform: translate(50%);
+  }
+
+  .base button:hover {
+    color: rgb(0, 110, 255);
+    background-color: rgb(255, 255, 255);
+  }
+
+  /* footer start  */
+  .socialmedia {
+    /* border: 2px solid red; */
+    background-color: rgb(0, 0, 0);
+    color: white;
+  }
+
+  .socialbase .soacilap {
+    width: 200px;
+    text-align: left;
+    /* border: 2px solid red; */
+    font-size: 0.6rem;
+    margin: 0 0 0 20px;
+  }
+
+  .socialmedia .socialbase {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 0 20px;
+  }
+
+  .socialmedia img {
+    width: 50px;
+    position: relative;
+    left: 0;
+    padding: 10px;
+  }
+
+  .ubin {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    background-color: rgb(29, 30, 34);
+  }
+
+  .ubin .selection {
+    width: 250px;
+    height: 50px;
+    background-color: rgb(29, 30, 34);
+    font-size: 30px;
+    position: relative;
+    right: 100px;
+  }
+
+  .ubin .ulogo img {
+    width: 30%;
+  }
+
+  .ubin select {
+    background-color: rgb(29, 30, 34);
+    color: white;
+    font-size: 30px;
+    outline: none;
+  }
+
+  .info {
+    background-color: rgb(29, 30, 34);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    padding: 10px 100px;
+  }
+
+  .info h4 {
+    line-height: 40px;
+  }
+
+  h6 {
+    font-size: 15px;
+    line-height: 40px;
+    color: grey;
+    font-weight: lighter;
+  }
+
+  .copyrights p {
+    text-align: left;
+    width: 200px;
+    font-size: 10px;
+  }
+}
+
+@media all and (min-width: 420px) {
+  nav {
+    width: 100%;
+  }
+  .dateset {
+    width: 150px;
+    /* background-color: red; */
+ 
+  
+  }
+  .baseFROthe{
+      overflow-x: hidden;
+  }
+
+  .base1 .animated-button {
+    left: -50px;
+  }
+  .base1 h1 {
+    left: -190px;
+  }
+  .base1 h3 {
+    left: -200px;
+  }
+  .base1 #imgLOGO {
+    left: 20px;
+  }
+  .base2 .animated-button {
+    left: -70px;
+    margin: 10px 0;
+  }
+  .base2 #imgLOGO {
+    left: 220px;
+    top: -10px;
+  }
+  .base3 .animated-button {
+    left: -70px;
+  }
+  .base3 h1 {
+    left: 10px;
+  }
+  .base3 h3 {
+    left: -240px;
+  }
+  .base3 #imgLOGO {
+    left: 20px;
+    top: 5px;
+  }
+  .base4 .animated-button {
+    left: -50px;
+  }
+  .base4 h1{
+    width: 300px;
+    transform: translateX(30%);
+    
+  }
+  .base4 h3 {
+    width: 300px;
+    transform: translateX(-10%);
+  }
+  .base4 #imgLOGO {
+    left: 20px;
+  }
+  .base5 .animated-button {
+    left: -100px;
+  }
+  .base5 h1 {
+    left: -230px;
+  }
+  .base5 h3 {
+    left: -280px;
+    transform: translateX(-15%);
+  }
+  .base5 #imgLOGO {
+    left: 10px;
+    top: 0px;
+  }
+  #articalbut{
+    left: -30px;
+    
+  }
+  #finalcard .base button{
+   position: relative;
+   right: 100px;
+  }
+  .soacilap{
+   display: none;
+  }
+}
+
+

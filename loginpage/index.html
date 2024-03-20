@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="./style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <div id="loding">
+        <div class="img"></div>
+    </div>
+    <div class="continer">
+        <div class="head">
+
+        </div>
+        <div class="login">
+            <h1>Login
+
+                <a href="">CREATE AN ACCOUNT</a>
+            </h1>
+
+        </div>
+        <!-- <form action="" id="form"> -->
+            <!-- <script>
+                function validation() {
+                    const msg = document.querySelector('.error')
+                    const emailVal = email.value;
+                    if (emailVal === "") {
+                        //  msg.innerHTML = "Enter correct mail id"
+                        //  msg.style.display="block";
+                        console.log("enter crt email")
+                    }else{
+                        console.log("else part");
+                    }
+                }
+            </script> -->
+
+            <div class="input_group" id="c" >
+                <i class="fa fa-envelope-o" aria-hidden="true" id="i"></i>
+
+                <input type="text" name="name" id="email" placeholder="">
+                <label for="email" class="lable">Email address</label>
+               
+                <div class="error"></div>
+            </div>
+
+            <div class="input_group" id="d" >
+                <i class="fa fa-unlock-alt" aria-hidden="true" id="i"></i>
+
+                <input type="password" name="password" id="password" placeholder="">
+
+                <label for="password" class="lable"> password</label>
+                <div class="errortwo"></div>
+            </div>
+
+            <div class="checkgroup" >
+                <div class="cbox">
+                    <input type="checkbox" name="Remember" id="Remember">
+                    <label for="Remember">Remember me</label>
+
+                </div>
+                <a href="">Forgot your password?</a>
+            </div>
+            <div class="buttom">
+                <button onclick="validation()" type="submit">LOG IN</button>
+            </div>
+
+
+        <!-- </form> -->
+        <div id="footerlog">
+            <div class="line"></div>
+
+            <span>Or log in with:</span>
+            <div class="line"></div>
+        </div>
+        <div class="socialmedia">
+            <a class="icon" href=""><img src="./Login_Ubisoft_WebAuth/fb.png" alt="" id="fb"></a>
+            <a class="icon" id="xbox" href=""><img src="./Login_Ubisoft_WebAuth/xbox.png" alt=""></a>
+            <a class="icon" id="twee" href=""><img src="./Login_Ubisoft_WebAuth/twee.png" alt=""></a>
+            <a class="icon" id="ps" href=""><img src="./Login_Ubisoft_WebAuth/ps (1).png" alt=""></a>
+
+        </div>
+        <div class="prt">
+            <a href="">Access Privacy policy </a>
+        </div>
+    </div>
+
+</body>
+<script src="./app.js">  </script>
+<script>
+    $(window).on('load', function (){
+        $("#loding").fadeOut(1000);
+        $(".continer").fadeIn(1000);
+        $("#loding").remove(1000);
+    });
+</script>
+
+
+</html>

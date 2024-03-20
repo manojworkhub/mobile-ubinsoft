@@ -1,0 +1,315 @@
+@import url('https://fonts.googleapis.com/css2?family=Afacad&display=swap');
+
+:root {
+    --view1: 2px solid red;
+    --view1: 2px solid green;
+    --color1: #242e47;
+    --color2: black;
+    --color3: #006EF5;
+}
+
+body {
+    border: 20px solid transparent;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+* {
+    border: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.continer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 20;
+
+}
+
+.head {
+    width: 400px;
+    height: 100px;
+    background-color: var(--color1);
+    background-image: url(../loginpage/Login_Ubisoft_WebAuth/10001\ \(1\).svg);
+    background-size: 200px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.login {
+    margin: 0;
+    border: 0;
+    padding: 10px 0;
+    font-size: .5rem;
+    font-weight: bolder;
+}
+
+.login h1 {
+    width: 100%;
+    position: relative;
+    top: 10px;
+    right: 60px;
+    color: var(--color1);
+    font-size: 1.25rem;
+}
+
+.login a {
+    text-decoration: none;
+    position: relative;
+    left: 120px;
+    color: var(--color1);
+}
+
+.login a:hover {
+    text-decoration: underline;
+
+}
+
+/* form start  */
+.input_group {
+    padding-top: 50px;
+    position: relative;
+    width: 100%;
+    /* background-color: red; */
+    border-bottom: 2px solid rgb(73, 73, 73);
+    height: 90px;
+    transition: 1s;
+}
+
+.input_group:hover {
+    border-bottom: 2px solid rgb(0, 0, 0);
+
+}
+
+.input_group input {
+
+    font-size: 1.25rem;
+    /* font-weight: bolder; */
+    color: var(--color2);
+    width: 380px;
+    height: 40px;
+    padding: 10px 0;
+    background-color: transparent;
+}
+
+.input_group input:focus {
+    outline: none;
+}
+
+/* <START******************THIS CSS CODE IS HELPING USE TO MOVE THE EMAIL AND PASSWORD LABEL************* > */
+
+.input_group .lable {
+    position: absolute;
+    left: 20px;
+    text-transform: capitalize;
+    transition: 0.3s ease;
+
+}
+
+.input_group input:focus~.lable
+ {
+    transform: scale(0.8) translateX(-30px) translateY(-30px);
+}
+
+.input_group input:valid~.lable{
+    transform: scale(0.8) translateX(-30px) translateY(-30px);
+}
+
+
+/* <END ******************THIS CSS CODE IS HELPING USE TO MOVE THE EMAIL AND PASSWORD LABEL************* > */
+
+.checkgroup {
+    padding: 50px 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 100px;
+
+}
+
+.checkgroup .cbox label {
+    font-weight: 500;
+    position: relative;
+    bottom: 3px;
+}
+
+.checkgroup a {
+    text-decoration: none;
+    color: var(--color1);
+    font-weight: bold;
+}
+
+.checkgroup .cbox input[type="checkbox"] {
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border: 2px solid rgb(2, 2, 2);
+    outline: 4px solid gainsboro;
+    cursor: pointer;
+    margin: 0 5px;
+    outline-style: solid;
+}
+
+.checkgroup .cbox input[type="checkbox"]:checked {
+    border: 2px solid rgb(0, 173, 226);
+}
+
+.checkgroup .cbox input[type="checkbox"]::after {
+    content: "\2714 ";
+    font-size: 16px;
+    position: relative;
+    bottom: 2px;
+    left: 2px;
+    display: none;
+    color: white;
+}
+
+.checkgroup .cbox input[type="checkbox"]:checked {
+    background-color: rgb(0, 173, 226);
+}
+
+.checkgroup .cbox input[type="checkbox"]:checked:after {
+    display: block;
+}
+
+button {
+    width: 390px;
+    background-color: var(--color3);
+    font-size: 1rem;
+    font-weight: 900;
+    padding: 20px 0;
+    color: white;
+    cursor: pointer;
+    border: 0;
+    margin: 0;
+}
+
+#footerlog {
+    padding: 20px 0;
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#footerlog .line {
+    width: 140px;
+    height: 1px;
+    background-color: rgb(138, 134, 134);
+    margin: 0 10px;
+}
+
+.socialmedia {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+
+}
+
+.socialmedia .icon img {
+    width: 30px;
+    height: 30px;
+}
+
+#fb {
+    width: 40px;
+    height: 40px;
+    position: relative;
+    bottom: 5px;
+}
+
+.prt {
+    padding: 10px 0;
+}
+
+.prt a {
+    text-decoration: none;
+    font-size: 1.25rem;
+    font-weight: bolder;
+    color: var(--color3);
+}
+
+#loding {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 700px;
+    z-index: 21;
+    background-color: rgb(255, 255, 255);
+
+}
+
+.img {
+    width: 100%;
+    height: 100%;
+    background-color: rgb(255, 255, 255);
+    background-image: url(./Login_Ubisoft_WebAuth/10007.svg);
+    background-size: 100px 100px;
+    background-repeat: no-repeat;
+    background-position: center;
+    animation-name: loding;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-delay: 1s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes loding {
+    0% {
+        opacity: 0.8;
+    }
+
+    /* 25%{
+        opacity: 0.5;
+    } */
+    50% {
+        opacity: 0.2;
+    }
+
+    /* 75%{
+        opacity: 0.5;
+    } */
+    100% {
+        opacity: 0.8;
+    }
+}
+
+.input_group.success .input_group {
+    border-bottom: 2px solid rgb(43, 255, 0);
+}
+
+.input_group.error .input_group {
+    border-bottom: 2px solid rgb(255, 0, 0);
+}
+
+.error {
+    width: 100%;
+    height: 100px;
+    border: 2px solid red;
+    /* position: relative;
+    top: 20px; */
+    border: 0;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    
+}
+
+.errortwo {
+    width: 100%;
+    height: 100px;
+    border: 2px solid red;
+    /* position: relative;
+    top: 20px; */
+    border: 0;
+    margin: 0;
+}
